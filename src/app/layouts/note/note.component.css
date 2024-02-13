@@ -1,0 +1,24 @@
+.note-component {
+  background: rgba(255,255,255,0.7);;
+    width: 80%;
+    border-radius: 20px;
+    overflow-wrap: break-word;
+}
+
+.note-text {
+    font-family: 'Josefin Sans', sans-serif;
+    font-size: 24px;
+    color: black;
+    
+}
+
+.delete-icon {
+    color: black;
+    width: 10px;
+    margin: 20px;
+
+}
+.delete-icon:hover {
+    cursor: pointer; /* Change mouse cursor to pointer on hover */
+  }
+
