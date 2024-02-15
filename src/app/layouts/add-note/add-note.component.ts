@@ -9,7 +9,6 @@ import { NoteComponent } from '../note/note.component';
 })
 export class AddNoteComponent {
   newNoteText: string = '';
-  @Output() notesUpdated: EventEmitter<any> = new EventEmitter();
 
   constructor(private noteService: NoteService) {}
 
@@ -20,7 +19,6 @@ export class AddNoteComponent {
       this.noteService.addNote(newNote).subscribe(() => {
         // Clear the input field after successful POST
         this.newNoteText = '';
-        this.notesUpdated.emit();
       });
     }
   }

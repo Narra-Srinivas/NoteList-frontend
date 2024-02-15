@@ -1,0 +1,47 @@
+.sign-in-container{
+    width: 100%;
+    height: 100vh;
+}
+
+
+.sign-in {
+    margin:auto;
+    width: 40%;
+    padding: 20px;
+    border-radius: 10px;
+    background-color: rgba(0, 0, 0, 0.7);
+    animation: fade-in-effect 1s linear;
+    
+}
+
+.login-form{
+    width: 100%;
+}
+
+.radius-effect{
+    border-radius: 20px;
+}
+
+.text-box-radius{
+    border-radius: 5px;
+}
+
+@keyframes fade-in-effect {
+    from{
+        opacity: 0;
+    }
+    to {
+        opacity: 100;
+    }
+    
+}
+input{
+    transition: 1s ease-in-out;
+    background-color:  rgba(255, 255, 255, 0.8);
+}
+
+input:focus{
+    scale: 1.05;
+    background-color:  rgba(255, 255, 255, 1);
+    
+}

@@ -2,6 +2,8 @@ import { Component, ComponentFactoryResolver, EventEmitter, OnDestroy, OnInit, O
 import { NoteService } from 'src/app/note.service';
 import { Note } from 'src/app/note';
 import { Subscription, interval, switchMap } from 'rxjs';
+import { Router } from '@angular/router';
+import { HttpResponse } from '@angular/common/http';
 
 @Component({
   selector: 'app-note',
@@ -13,7 +15,8 @@ export class NoteComponent implements OnInit, OnDestroy {
   private subscription: Subscription;
 
   constructor(
-    private noteService: NoteService
+    private noteService: NoteService,
+    private router: Router
     ) {}
 
 
@@ -33,7 +36,10 @@ ngOnDestroy(): void {
   }
 }
   getNotes() {
-    this.noteService.getNotes().subscribe(notes => { this.notes = notes});
+    this.noteService.getNotes().subscribe((response: HttpResponse<any>) => { this.notes = response.body;
+      console.log(response.status);
+
+   });
 
   }
 

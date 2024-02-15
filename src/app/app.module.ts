@@ -9,6 +9,7 @@ import { NoteComponent } from './layouts/note/note.component';
 import { HomeComponent } from './page/home/home.component';
 import { AddNoteComponent } from './layouts/add-note/add-note.component';
 import { HttpClientModule } from '@angular/common/http';
+import { LoginComponent } from './page/login/login.component';
 
 @NgModule({
   declarations: [
@@ -17,6 +18,7 @@ import { HttpClientModule } from '@angular/common/http';
     NoteComponent,
     HomeComponent,
     AddNoteComponent,
+    LoginComponent,
   ],
   imports: [
     BrowserModule,

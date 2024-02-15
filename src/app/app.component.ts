@@ -1,4 +1,6 @@
 import { Component } from '@angular/core';
+import { Router } from '@angular/router';
+import { TokenService } from './token.service';
 
 @Component({
   selector: 'app-root',
@@ -6,6 +8,7 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
+  constructor(private router: Router, private tokenService: TokenService) {}
   isRotated: boolean = false;
   toggleRotation(): void {
     this.isRotated = !this.isRotated; 
@@ -36,4 +39,5 @@ onNotesUpdated() {
     this.currentImageIndex = (this.currentImageIndex + 1) % this.imageUrls.length;
     this.backgroundImageUrl = this.imageUrls[this.currentImageIndex];
   }
+
 }
