@@ -1,0 +1,41 @@
+
+<!-- Date-time-year container :: has two divs in column flex :: date-container-div and time-container-div -->
+<div class="date-time-year-container d-flex flex-column mx-auto">
+
+
+    <!-- date-container from the app-date component :: all the functionality and styles are in date-year component -->
+    <div class="date-container d-flex mx-auto justify-content-center">
+        <app-date-year></app-date-year>
+    </div>
+
+    <!-- time-container :: uses timebox component to display each time digit. data is updated through date-time typescript file -->
+    <div class="time-container d-flex mx-auto justify-content-center">
+
+        <!-- time-box components for hours 0s and 10s place digits -->
+        <app-time-box [currentTimeFull]="currentTimeHours10s"></app-time-box>
+        <app-time-box [currentTimeFull]="currentTimeHours0s"></app-time-box>
+
+                <!-- pulsing dots div :: styles and animation in date-time css -->
+                <div class="time-dots d-flex flex-column justify-content-around my-auto">
+                    <div class="dot"></div>
+                    <div class="dot"></div>
+                </div>
+
+        <!-- time-box- components for minutes 0s and 10s place digits -->
+        <app-time-box [currentTimeFull]="currentTimeMinutes10s"></app-time-box>
+        <app-time-box [currentTimeFull]="currentTimeMinutes0s"></app-time-box>
+
+                <!-- pulsing dots div :: styles and animation in date-time css -->
+                <div class="time-dots d-flex flex-column justify-content-around my-auto">
+                    <div class="dot"></div>
+                    <div class="dot"></div>
+                </div>
+
+        <!-- Time box components for 0s and 10s place digits -->
+        <app-time-box [currentTimeFull]="currentTimeSeconds10s"></app-time-box>
+        <app-time-box [currentTimeFull]="currentTimeSeconds0s"></app-time-box>
+
+
+    </div>
+
+</div>

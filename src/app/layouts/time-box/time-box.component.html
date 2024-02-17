@@ -1,0 +1,6 @@
+<div class="time-box">
+    <ng-container *ngFor="let digit of digits">
+        <h1 class="time-digit" [style.top.px]="digit.top"><span class="digit">{{digit.value}}</span></h1>
+    </ng-container>
+    
+</div>

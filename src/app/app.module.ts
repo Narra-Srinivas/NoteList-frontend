@@ -10,6 +10,9 @@ import { HomeComponent } from './page/home/home.component';
 import { AddNoteComponent } from './layouts/add-note/add-note.component';
 import { HttpClientModule } from '@angular/common/http';
 import { LoginComponent } from './page/login/login.component';
+import { DateTimeComponent } from './page/date-time/date-time.component';
+import { TimeBoxComponent } from './layouts/time-box/time-box.component';
+import { DateYearComponent } from './layouts/date-year/date-year.component';
 
 @NgModule({
   declarations: [
@@ -19,6 +22,9 @@ import { LoginComponent } from './page/login/login.component';
     HomeComponent,
     AddNoteComponent,
     LoginComponent,
+    DateTimeComponent,
+    TimeBoxComponent,
+    DateYearComponent,
   ],
   imports: [
     BrowserModule,

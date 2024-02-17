@@ -21,10 +21,12 @@ onNotesUpdated() {
 }
   title = 'NotePad';
   imageUrls: string[] = [
+    'assets/white.jpg',
     'assets/mountain-peak-alps-7680x4320-11501.jpg',
     'assets/thick-forest-5120x2880-14776.jpg',
     'assets/tropical-beach-5120x2880-14811.jpg',
     'assets/pexels-sohail-nachiti-807598.jpg'
+    
 
   ];
   currentImageIndex: number = 1;
